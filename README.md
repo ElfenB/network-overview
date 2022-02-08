@@ -1,6 +1,22 @@
-# Vue 3 + Vite
+# Network overview
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is my first project with VueJS and Vite. The goal is an overview of my SmartHome setup. From there I want to get every device on one page and be able to see the update status and the URL of the web-interface.
+
+In the longer run, I also want to run updates, preferably in bulk from within this view.
+
+The app is build more or less modular with components, so that I can quick, easy and flexible expand in any direction whenever I get new devices.
+
+## Install
+
+```shell
+npm install
+```
+
+## Run dev environment
+
+```shell
+npm run dev
+```
 
 ## Recommended IDE Setup
 
