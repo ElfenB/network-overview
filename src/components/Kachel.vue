@@ -4,7 +4,7 @@
       <h2>{{ data.name }}</h2>
       <p v-if="data.room">{{ data.room }}</p>
       <h3>{{ data.description }}</h3>
-      <p v-if="version != ''">{{ version }}</p>
+      <p v-if="details.version != ''">{{ details.version }}{{ details.sensors ? "s" : "" }}</p>
     </div>
   </a>
 </template>
@@ -18,25 +18,25 @@ const props = defineProps({
   type: String
 })
 
-const version = ref("")
+const details = ref({})
 
-async function getVersion(url, type) {
+async function getDetails(url, type) {
   if (type == "tasmota") {
-    return await getVersionTasmota(url)
+    return await getDetailsTasmota(url)
   }
   return null
 }
 
-async function getVersionTasmota(url) {
+async function getDetailsTasmota(url) {
   let only_ip = url.substring(url.indexOf("http://") + 7)
 
   const res = await axios.get("http://pi4.fritz.box:1880/tasmota_version/" + only_ip)
-  console.log(res.data.version);
-  return String(res.data.version)
+  console.log(res.data);
+  return res.data
 }
 
 onMounted(async () => {
-  version.value = await getVersion(props.data.url, props.type)
+  details.value = await getDetails(props.data.url, props.type)
 })
 </script>
 
