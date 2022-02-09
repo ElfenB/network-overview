@@ -2,7 +2,8 @@
   <a :href="data.url" id="link" target="_blank">
     <div id="body">
       <h2>{{ data.name }}</h2>
-      <h3>{{ data.beschreibung }}</h3>
+      <p v-if="data.room">{{ data.room }}</p>
+      <h3>{{ data.description }}</h3>
     </div>
   </a>
 </template>
@@ -33,5 +34,8 @@ h2 {
 }
 h3 {
   color: var(--secondary-font-color);
+}
+p {
+  margin: 0;
 }
 </style>
