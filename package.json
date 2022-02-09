@@ -2,11 +2,12 @@
   "name": "network-overview",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },

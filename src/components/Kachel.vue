@@ -19,6 +19,7 @@ defineProps({
   font-size: small;
 }
 #body {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

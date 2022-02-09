@@ -7,12 +7,15 @@
 
 <script setup>
 import { ref } from "vue"
+import _ from "lodash"
+
 import KachelBlock from '../components/KachelBlock.vue';
 import { data } from "../../data/sample.js"
 
 const kacheln = ref({})
 
-kacheln.value = data
+// Sort alphabetical
+kacheln.value = _.sortBy(data, "name", "beschreibung")
 </script>
 
 <style scoped>
