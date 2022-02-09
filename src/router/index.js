@@ -6,6 +6,11 @@ const routes = [
     name: "Home",
     component: () => import("@/../../src/views/Home.vue"),
   },
+  {
+    path: "/:catchAll(.*)",
+    component: () => import("@/../../src/views/NotFound.vue"),
+    name: "NotFound",
+  },
 ];
 
 const router = createRouter({
