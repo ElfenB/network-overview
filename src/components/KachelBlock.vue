@@ -22,13 +22,14 @@ defineProps({
   width: 10em;
   height: 10em;
   /* border: 1px solid black; */
-  box-shadow: 2px 2px 6px 1px var(--shadow-color);
+  box-shadow: 3px 3px 7px -1px var(--shadow-color);
   margin: .5em;
   border-radius: 1.8em;
   background-color: var(--kacheln-farbe);
+  border: 1px solid var(--kacheln-border);
+  transition: transform 200ms ease-in-out;
 }
 .kacheln:hover {
-  transform: scale(1.1);
-  transition: transform 200ms;
+  transform: scale(1.05);
 }
 </style>

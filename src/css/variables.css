@@ -7,13 +7,15 @@
   /* Background color */
   --background: rgb(255, 253, 248);
   --background-small-contrast: rgb(124, 124, 124);
-
+  
   /* Header color */
-  --header-color: rgba(212, 225, 245, 0.5);
+  --header-color: rgb(212, 220, 231);
+  --header-contrast: rgba(127, 128, 131, 0.2);
   
   /* Kacheln specific */
-  --kacheln-farbe: rgba(64, 65, 70, 0.4);
+  --kacheln-farbe: rgba(146, 151, 175, 0.4);
   --shadow-color: rgba(0, 0, 0, 0.5);
+  --kacheln-border: rgba(136, 136, 136, 0.103);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,10 +29,10 @@
     --background: rgb(65, 65, 65);
     --background-small-contrast: rgb(124, 124, 124);
     
-      /* Header color */
-      --header-color: rgba(15, 15, 15, 0.5);
+    /* Header color */
+    --header-color: rgba(15, 15, 15, 0.5);
     
     /* Kacheln specific */
-    --kacheln-farbe: rgba(0, 0, 0, 0.4);
+    --kacheln-farbe: rgba(20, 20, 20, 0.4);
   }
 }

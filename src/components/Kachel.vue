@@ -3,7 +3,6 @@
     <div id="body">
       <h2>{{ data.name }}</h2>
       <h3>{{ data.beschreibung }}</h3>
-      <img v-if="data.image" :src="data.image" :alt="data.name">
     </div>
   </a>
 </template>
@@ -25,6 +24,9 @@ defineProps({
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+h2, h3 {
+  margin: 0;
 }
 h2 {
   color: var(--primary-font-color);

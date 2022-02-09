@@ -3,7 +3,9 @@
     <header>
       <h1>Network overview</h1>
     </header>
-    <KachelBlock :data="kacheln" />
+    <div id="content-block">
+      <KachelBlock :data="kacheln" />
+    </div>
   </div>
 </template>
 
@@ -24,9 +26,13 @@ kacheln.value = _.sortBy(data, "name", "beschreibung")
 header {
   background-color: var(--header-color);
   padding: 1em;
+  border-bottom: 1px solid var(--header-contrast);
 }
 h1 {
   text-align: left;
   margin: 0;
+}
+#content-block {
+  margin: 0.5em;
 }
 </style>
