@@ -1,14 +1,20 @@
 <template>
   <div id="raster">
-    <Kachel v-for="kachel in data" class="kacheln" :data="kachel" />
+    <Kachel
+      v-for="kachel in data"
+      :type="type"
+      class="kacheln"
+      :data="kachel"
+    />
   </div>
 </template>
 
 <script setup>
 import Kachel from './Kachel.vue';
 
-defineProps({
-  data: Object
+const props = defineProps({
+  data: Object,
+  type: String
 })
 </script>
 
@@ -23,7 +29,7 @@ defineProps({
   height: 10em;
   /* border: 1px solid black; */
   box-shadow: 3px 3px 7px -1px var(--shadow-color);
-  margin: .5em;
+  margin: 0.5em;
   border-radius: 1.8em;
   background-color: var(--kacheln-farbe);
   border: 1px solid var(--kacheln-border);

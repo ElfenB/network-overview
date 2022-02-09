@@ -6,8 +6,8 @@
     <div id="content-block">
       <ListenBlock :data="dashboard_devices">Dashboards</ListenBlock>
       <ListenBlock :data="system_devices">Systeme</ListenBlock>
-      <ListenBlock :data="tasmota_devices">Tasmota Geräte</ListenBlock>
-      <ListenBlock :data="mongoose_devices">Mongoose Geräte</ListenBlock>
+      <ListenBlock :data="tasmota_devices" type="tasmota">Tasmota Geräte</ListenBlock>
+      <ListenBlock :data="mongoose_devices" type="mongoose">Mongoose Geräte</ListenBlock>
     </div>
   </div>
 </template>

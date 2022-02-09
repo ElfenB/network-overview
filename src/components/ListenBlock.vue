@@ -3,7 +3,7 @@
     <ListHeading>
       <slot></slot>
     </ListHeading>
-    <KachelBlock :data="data" />
+    <KachelBlock :data="data" :type="type" />
   </div>
 </template>
 
@@ -12,7 +12,8 @@ import KachelBlock from '../components/KachelBlock.vue';
 import ListHeading from "../components/ListHeading.vue"
 
 defineProps({
-  data: Object
+  data: Object,
+  type: String
 })
 
 </script>
