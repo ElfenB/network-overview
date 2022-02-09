@@ -31,6 +31,7 @@ h2, h3 {
 }
 h2 {
   color: var(--primary-font-color);
+  font-size: medium;
 }
 h3 {
   color: var(--secondary-font-color);
