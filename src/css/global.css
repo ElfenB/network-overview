@@ -6,9 +6,10 @@
 }
 
 * {
-  color: var(--font-color);
+  color: var(--general-font-color);
 }
 
 body {
   background: var(--background);
+  margin: 0;
 }

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Network overview</h1>
+    <header>
+      <h1>Network overview</h1>
+    </header>
     <KachelBlock :data="kacheln" />
   </div>
 </template>
@@ -19,6 +21,10 @@ kacheln.value = _.sortBy(data, "name", "beschreibung")
 </script>
 
 <style scoped>
+header {
+  background-color: var(--header-color);
+  padding: 1em;
+}
 h1 {
   text-align: left;
   margin: 0;
