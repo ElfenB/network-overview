@@ -32,14 +32,14 @@ async function getDetails(url, type) {
 async function getDetailsMongoose(url) {
   let only_ip = url.substring(url.indexOf("http://") + 7)
 
-  const res = await axios.get("http://pi4.fritz.box:1880/mongoose_details/" + only_ip)
+  const res = await axios.get("http://commodore.local:1880/mongoose_details/" + only_ip)
   return res.data
 }
 
 async function getDetailsTasmota(url) {
   let only_ip = url.substring(url.indexOf("http://") + 7)
 
-  const res = await axios.get("http://pi4.fritz.box:1880/tasmota_details/" + only_ip)
+  const res = await axios.get("http://commodore.local:1880/tasmota_details/" + only_ip)
   return res.data
 }
 
