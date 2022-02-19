@@ -32,15 +32,25 @@ async function getDetails(url, type) {
 async function getDetailsMongoose(url) {
   let only_ip = url.substring(url.indexOf("http://") + 7)
 
-  const res = await axios.get("http://commodore.local:1880/mongoose_details/" + only_ip)
-  return res.data
+  try {
+    const res = await axios.get("http://192.168.178.44:1880/mongoose_details/" + only_ip)
+    return res.data
+  } catch (err) {
+    console.warn(err.message);
+    return null
+  }
 }
 
 async function getDetailsTasmota(url) {
   let only_ip = url.substring(url.indexOf("http://") + 7)
 
-  const res = await axios.get("http://commodore.local:1880/tasmota_details/" + only_ip)
-  return res.data
+  try {
+    const res = await axios.get("http://192.168.178.44:1880/tasmota_details/" + only_ip)
+    return res.data
+  } catch (err) {
+    console.warn(err.message);
+    return null
+  }
 }
 
 onMounted(async () => {
