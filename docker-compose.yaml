@@ -1,6 +1,7 @@
 version: "3.8"
 services:
   frontend:
+    container_name: network-overview
     build: .
     restart: unless-stopped
     ports:
